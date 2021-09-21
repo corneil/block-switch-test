@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'org.asciidoctor.jvm.convert' version '3.1.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url = 'https://repo.spring.io/release'
+    }
+}
+
+configurations {
+    asciidoctorExt
+}
+
+dependencies {
+    // asciidoctorExt 'io.spring.asciidoctor:spring-asciidoctor-extensions-block-switch:0.6.1-SNAPSHOT-CDP'
+    asciidoctorExt 'io.spring.asciidoctor:spring-asciidoctor-extensions-block-switch:0.6.0'
+}
+
+asciidoctor {
+    configurations 'asciidoctorExt'
+    sourceDir file('.')
+    sources {
+        include '*.adoc'
+    }
+}
+

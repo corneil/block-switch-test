@@ -1,0 +1,23 @@
+= Test
+
+[source,groovy,role="primary"]
+.Groovy DSL
+----
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.2.7.RELEASE' // <1>
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' // <2>
+}
+----
+[source,kotlin,role="secondary"]
+.Kotlin DSL
+----
+plugins {
+    id("java")
+    id("org.springframework.boot") version "2.2.7.RELEASE" // <1>
+    id("io.spring.dependency-management") version "1.0.11.RELEASE" // <2>
+}
+----
+
+<1> Spring Boot plugin
+<2> Spring Dependency Management plugin
