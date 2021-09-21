@@ -1,5 +1,7 @@
 = Test
 
+Illustrate block-switch with callout.
+
 [source,groovy,role="primary"]
 .Groovy DSL
 ----
